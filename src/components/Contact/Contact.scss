@@ -1,0 +1,15 @@
+.ContactItem {
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+.ContactItem__Gravatar,
+.ContactItem__FullName {
+  display: inline-block;
+  vertical-align: middle;
+}
+.ContactItem__Gravatar {
+  margin-right: 10px;
+}
+.FullName__First {
+  margin-right: 5px;
+}
