@@ -13,7 +13,7 @@ export class ContactDetails extends Component {
 
   render() {
     let { firstname, lastname, email, country } = this.state.data;
-    let { backButtonHandler } = this.props;
+    let { backButtonHandler, updateUser } = this.props;
     let countryName = countries.filter((c) => c.code === country)[0].name;
 
     return (
@@ -22,6 +22,7 @@ export class ContactDetails extends Component {
           <ContactForm
             mode="Editing"
             data={this.state.data}
+            updateUser={updateUser}
             handleCancelClick={this.handleCancelClick.bind(this)} />
         ) : (
         <div className="ContactDetails">
@@ -37,7 +38,7 @@ export class ContactDetails extends Component {
             </div>
             <div className="ContentHeader__Actions">
               <button className="button button--action" onClick={this.handleEditClick.bind(this)}>Edit</button>
-              <button className="button button--warning">Delete</button>
+              <button className="button button--warning" onClick={this.handleDeleteClick.bind(this)}>Delete</button>
             </div>
           </header>
           <section className="ContactDetails__Body">
@@ -45,8 +46,7 @@ export class ContactDetails extends Component {
               <Gravatar email={email} />
             </div>
             <h1 className="ContactDetails__FullName">
-              <span className="FullName__First">{ firstname }</span>
-              <span className="FullName__Last">{ lastname }</span>
+              <span className="FullName__First">{ firstname }</span>{' '}<span className="FullName__Last">{ lastname }</span>
             </h1>
             <div className="ContactDetails__Email">{ email }</div>
             <div className="ContactDetails__Country">{ countryName }</div>
@@ -85,5 +85,11 @@ export class ContactDetails extends Component {
 
   handleEditClick() {
     this.setState({ editing: true });
+  }
+
+  handleDeleteClick() {
+    let { id, deleteUser } = this.props;
+
+    deleteUser(id);
   }
 }
