@@ -1,12 +1,12 @@
 # AddressBook
 
-## Run locally
+## Run dev
 1. Clone the repo
 2. Run `npm install`
 3. Run `npm start`
 4. Go to 'http://localhost:3000'
 
-## Run locally
+## Run production
 1. Clone the repo
 2. Run `npm install`
 3. Run `npm run build`
