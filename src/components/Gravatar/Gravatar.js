@@ -9,11 +9,7 @@ export class Gravatar extends Component {
   render() {
     let { email } = this.props;
 
-    return (
-      <div>
-        <img src={this.state.url} alt={`Gravatar for ${email}`} />
-      </div>
-    );
+    return <img src={this.state.url} alt={`Gravatar for ${email}`} />;
   }
 
   componentWillMount() {
