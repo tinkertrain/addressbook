@@ -1,6 +1,19 @@
+@import "../../sass/palette";
+
 .ContactItem {
   list-style-type: none;
   margin-bottom: 15px;
+}
+.ContactItem__ActionWrapper {
+  border: 0;
+  padding: 5px 0 5px 20px;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+
+  &:focus {
+    outline: 2px dotted black;
+  }
 }
 .ContactItem__Gravatar,
 .ContactItem__FullName {
@@ -8,8 +21,15 @@
   vertical-align: middle;
 }
 .ContactItem__Gravatar {
-  margin-right: 10px;
-}
-.FullName__First {
-  margin-right: 5px;
+  margin-right: 15px;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid white;
+  overflow: hidden;
+  text-align: center;
+  img {
+    margin-top: 10px;
+  }
 }

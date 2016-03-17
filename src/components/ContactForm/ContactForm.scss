@@ -1,0 +1,66 @@
+@import "../../sass/palette";
+
+.ContactForm__Body {
+  background-color: $clouds;
+  margin: 20px;
+  padding: 20px;
+}
+
+.ContactForm__Input {
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  label,
+  select,
+  input {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  label {
+    width: 100px;
+    margin-right: 15px;
+    height: 30px;
+    line-height: 30px;
+  }
+  select,
+  input {
+    height: 30px;
+    width: 200px;
+    line-height: 30px;
+
+    &:focus {
+      outline: 2px dotted black;
+      box-shadow: 0;
+    }
+  }
+  input {
+    padding: 0 5px;
+  }
+}
+.Error {
+  text-align: left;
+  position: absolute;
+  padding: 0 20px;
+  height: 30px;
+  line-height: 30px;
+  top: 0;
+  right: -100px;
+  background-color: $pumpkin;
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  width: 180px;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 8px;
+    left: -12px;
+    border-color: transparent $pumpkin transparent transparent;
+    border-width: 6px;
+    border-style: solid;
+  }
+}

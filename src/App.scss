@@ -8,10 +8,14 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+body {
+  padding: 60px;
+  background-color: $peterRiver;
+}
 .button {
   border: 0;
   border-radius: 7px;
-  padding: 10px 15px;
+  padding: 5px 10px;
   font-size: 14px;
   color: #fff;
 

@@ -1,11 +1,14 @@
 @import "../../sass/palette";
 
 .Container__Left {
+  position: relative;
   background-color: $clouds;
 
   display: inline-block;
   vertical-align: top;
   width: 400px;
+
+  box-shadow: 3px 0 3px rgba(black, 0.15);
 
   header {
     background-color: $silver;
@@ -50,8 +53,12 @@
 .ContentHeader__Actions {
   text-align: center;
   float: right;
-  margin-top: 5px;
+  margin-top: 10px;
   button {
     margin-right: 10px;
   }
+}
+.ContactList ul {
+  margin: 0;
+  padding: 15px 0 0 0;
 }
