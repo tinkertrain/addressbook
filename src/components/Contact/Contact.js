@@ -8,13 +8,14 @@ export class Contact extends Component {
 
     return (
       <li className="ContactItem" onClick={clickHandler}>
-        <div className="ContactItem__Gravatar">
-          <Gravatar email={email} />
-        </div>
-        <div className="ContactItem__FullName">
-          <span className="FullName__First">{ firstname }</span>
-          <span className="FullName__Last">{ lastname }</span>
-        </div>
+        <button className="ContactItem__ActionWrapper">
+          <div className="ContactItem__Gravatar">
+            <Gravatar email={email} />
+          </div>
+          <div className="ContactItem__FullName">
+            <span className="FullName__First">{ firstname }</span>{' '}<span className="FullName__Last">{ lastname }</span>
+          </div>
+        </button>
       </li>
     );
   }
