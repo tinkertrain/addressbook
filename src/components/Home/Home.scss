@@ -1,0 +1,57 @@
+@import "../../sass/palette";
+
+.Container__Left {
+  background-color: $clouds;
+
+  display: inline-block;
+  vertical-align: top;
+  width: 400px;
+
+  header {
+    background-color: $silver;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  h1 {
+    color: #fff;
+    background-color: $wetAsphalt;
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+.Container__Right {
+  background-color: $silver;
+
+  display: inline-block;
+  vertical-align: top;
+  width: 600px;
+  height: 400px;
+}
+
+.ContentHeader {
+  height: 50px;
+  background-color: $wetAsphalt;
+  overflow: hidden;
+}
+.ContentHeader__Back {
+  float: left;
+}
+.ContentHeader__Mode {
+  float: left;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 50px;
+  text-indent: 30px;
+}
+.ContentHeader__Actions {
+  text-align: center;
+  float: right;
+  margin-top: 5px;
+  button {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,44 @@
+@import "../../sass/palette";
+
+.BackButton {
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  border: 0;
+  background-color: lighten($wetAsphalt, 10%);
+
+  &:hover {
+    background-color: darken($wetAsphalt, 10%);
+  }
+}
+#backArrow {
+  fill: white;
+}
+.ContactDetails__Body {
+  text-align: center;
+  background-color: $clouds;
+  margin: 20px;
+  padding: 20px;
+}
+.ContactDetails__Gravatar {
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 30px auto;
+  overflow: hidden;
+  img {
+    margin-top: 10px;
+  }
+}
+.ContactDetails__FullName {
+  margin: 0 0 15px 0;
+  padding: 0;
+  font-weight: 300;
+}
+.ContactDetails__Email,
+.ContactDetails__Country {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
