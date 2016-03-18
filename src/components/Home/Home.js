@@ -5,6 +5,7 @@ import { contacts } from '../../data/contacts';
 import { Contact } from '../Contact/Contact';
 import { ContactDetails } from '../ContactDetails/ContactDetails';
 import { ContactForm } from '../ContactForm/ContactForm';
+import { dasherize } from '../../utils/utils';
 
 import './Home.scss';
 
@@ -89,7 +90,10 @@ export class Home extends Component {
   }
 
   saveUser(user) {
-    user.id = this.state.contacts.length;
+    user.id = this.state.contacts.length === 0 ?
+      `${dasherize(user.lastname)}_0` :
+      `${dasherize(user.lastname)}_${Math.floor(Math.random() * 100) + 1 }`;
+
     let updatedContacts = this.state.contacts.concat(user);
 
     this.setState({
